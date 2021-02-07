@@ -6,14 +6,17 @@ import API from "../components/API";
 
  function Tablecontainer() {
     const [employees,setEmployees] = useState([])
-    
+    const [index,setIndex]= useState([])
+    console.log(employees)
+    console.log(useState([]))
 useEffect(() => {
     API.search() 
     .then(res =>{
-     setEmployees(res.data.results[0])
-    console.log(res.data.results[0])
+     setEmployees(res.data.results)
+    console.log(res.data.results)
     })
     .catch(err => console.log(err));
+    
 
   }, [])
  
@@ -21,15 +24,16 @@ useEffect(() => {
         <div>
             <Header />
             <Table 
-            
-            // employees = {employees}
+            num={index + 1}
+            employees = {employees}
             picture={employees.picture}
-             name={employees.name} 
+            name={employees.name} 
             email={employees.email}
             phone={employees.phone}
-            dob={employees.dob}
+            dob={employees.location}
             
             />
+            
         </div>
     )
 }
