@@ -3,6 +3,7 @@ import React from 'react'
 
 
 function Table(employees){
+  
 
     return (
         <table className="table table-striped">

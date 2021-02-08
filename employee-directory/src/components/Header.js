@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-function Header(props){
+function Header({handleSearchButton,input, handleSearchInput}){
+
+    
    
+  
+
     return (
         <div className="jumbotron jumbotron-fluid">
             <div className="container">
@@ -12,11 +16,13 @@ function Header(props){
                 type="text" 
                 placeholder="Search"
                 id="Search"
+                value={input}
+                onChange={handleSearchInput}
                 >
                     
                 </input>
                  <button className="btn btn-secondary my-2 my-sm-0"
-                  type="submit" onClick={props.search }>Search</button>
+                  type="submit" onClick={handleSearchButton}>Search</button>
                 </form>
                 
                 

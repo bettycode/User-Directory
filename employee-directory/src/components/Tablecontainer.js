@@ -7,8 +7,10 @@ import API from "../components/API";
  function Tablecontainer() {
     const [employees,setEmployees] = useState([])
     const [index,setIndex]= useState([])
-    console.log(employees)
-    console.log(useState([]))
+     const [input,setInput]= useState("")
+    // console.log(employees)
+  
+
 useEffect(() => {
     API.search() 
     .then(res =>{
@@ -20,9 +22,25 @@ useEffect(() => {
 
   }, [])
  
+  const handleSearchInput =(event) =>{
+    setInput(event.target.value);
+   
+  }
+ 
+
+  const handleSearchButton = (event) =>{
+    event.preventDefault();
+      console.log("clicked")
+  }
+  
     return (
         <div>
-            <Header />
+            <Header 
+            handleSearchInput = {handleSearchInput}
+            handleSearchButton ={handleSearchButton}
+            input = {input}
+           
+           />
             <Table 
             num={index + 1}
             employees = {employees}
