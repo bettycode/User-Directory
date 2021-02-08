@@ -1,6 +1,6 @@
 {
   "name": "employee-directory",
-  "homepage": "https://bettycode.github.io/User-Directory/employee-directory",
+  "homepage": "https://bettycode.github.io/User-Directory",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
