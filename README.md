@@ -13,10 +13,10 @@
 
 #
 
-![img]()
+![img](assets/1.png)
 
 #
-![img]()
+![img](assets/2.gif)
 
 # Table of Contents
 
@@ -34,7 +34,7 @@
 
 # Installation
 
-
+Dependencies must be installed to run the application properly:
 
 # Usage
 
