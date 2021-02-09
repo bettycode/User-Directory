@@ -5,7 +5,8 @@ function Header({handleSearchButton,input, handleSearchInput}){
    const style = {
          container:{
             background: "purple",
-            color: "white"
+            color: "white",
+            marginBottom:"0"
          },
          search:{
              paddingTop: "10px"

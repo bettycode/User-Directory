@@ -6,7 +6,7 @@ function Table({employees,sort,sortemail}){
   
   const style = {
     table:{
-       background: "purple",
+       background: "#800080b3",
        color: "white"
     },
     tables:{
