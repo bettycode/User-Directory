@@ -28,9 +28,10 @@ useEffect(() => {
     // setInput(event.target.value);
     const { value } = event.target;
     setInput(value);
-    const newEmployee = oldEmployee.filter((person) => {
-      return person.name.first.toLowerCase().includes(value.toLowerCase());
+    const newEmployee = oldEmployee.filter((user) => {
+      return user.name.first.toLowerCase().includes(value.toLowerCase());
     });
+   
     setEmployees(newEmployee);
   }
  
@@ -38,7 +39,11 @@ useEffect(() => {
   const handleSearchButton = (event) =>{
     event.preventDefault();
       console.log("clicked")
+      const { value } = event.target;
+    setInput(value);
+    
   }
+ 
   
    //sorting by name
    const sort =(e)=>{
@@ -46,14 +51,14 @@ useEffect(() => {
     const newEmployee = oldEmployee.sort((a, b) => {
       let fa = a.name.first.toLowerCase(),
           fb = b.name.first.toLowerCase();
-  
+      let comp = 0
       if (fa < fb) {
-          return -1;
+         comp= -1;
       }
       if (fa > fb) {
-          return 1;
+         comp =1;
       }
-      return 0;
+      return comp;
   });
     console.log(oldEmployee)
     setEmployees(newEmployee)
@@ -61,6 +66,28 @@ useEffect(() => {
 
 
   }
+
+    // //sorting by email
+    // const sortemail =(e)=>{
+    //   console.log("clicked")
+    //   const newEmployee = oldEmployee.sort((a, b) => {
+    //     let fa = a.email.toLowerCase(),
+    //         fb = b.email.toLowerCase();
+        
+    //     if (fa < fb) {
+    //         return -1;
+    //     }
+    //     if (fa > fb) {
+    //         return 1;
+    //     }
+    //     return 0;
+    // });
+    //   console.log(oldEmployee)
+    //   setEmployees(newEmployee)
+    //   console.log(oldEmployee)
+  
+  
+    // }
     return (
         <div>
             <Header 
@@ -79,6 +106,7 @@ useEffect(() => {
             phone={employees.phone}
             dob={employees.location}
             sort = {sort}
+            // sort = {sortemail}
             />
             </div>
         </div>

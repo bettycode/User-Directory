@@ -30,7 +30,7 @@ function Header({handleSearchButton,input, handleSearchInput}){
                     
                 </input>
                  <button className="btn btn-secondary my-2 my-sm-0"
-                  type="submit" onClick={handleSearchButton}>Search</button>
+                  type="submit" onClick={handleSearchButton}>Clear</button>
                 </form>
                 
                 

@@ -2,7 +2,7 @@ import React from 'react'
 
 
 
-function Table({employees,sort}){
+function Table({employees,sort,sortemail}){
   
   const style = {
     table:{
@@ -24,7 +24,7 @@ function Table({employees,sort}){
     <tr>
        <th scope="col" style={style.padding}>#</th> 
       <th scope="col">Picture</th>
-      <th scope="col" onClick={sort}>Name</th>
+      <th scope="col" onClick={e =>sort(e)}>Name</th>
       <th scope="col">Email</th>
       <th scope="col">Phone</th>
       <th scope="col">State</th>
