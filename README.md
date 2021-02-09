@@ -8,7 +8,7 @@
 (https://bettycode.github.io/User-Directory/)
 
 # Description
-
+An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
 
 
 #
@@ -36,8 +36,17 @@
 
 Dependencies must be installed to run the application properly:
 
-# Usage
+* axios
+* bootstrap
+* gh-pages
+* react
+* react-dom
+* react-router-dom
+* react-scripts
+* web-vitals
 
+# Usage
+  This app is used to access entire employee directory at once so that you have quick access to their information.
 
 
 
