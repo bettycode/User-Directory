@@ -2,7 +2,7 @@ import React from 'react'
 
 
 
-function Table(employees){
+function Table({employees,sort}){
   
   const style = {
     table:{
@@ -24,7 +24,7 @@ function Table(employees){
     <tr>
        <th scope="col" style={style.padding}>#</th> 
       <th scope="col">Picture</th>
-      <th scope="col">Name</th>
+      <th scope="col" onClick={sort}>Name</th>
       <th scope="col">Email</th>
       <th scope="col">Phone</th>
       <th scope="col">State</th>
@@ -34,7 +34,7 @@ function Table(employees){
 
   <tbody>
 
-      {employees.employees.map((employee,index) => (
+      {employees.map((employee,index) => (
         <tr key={employee.login.uuid} >
          <td style={style.padding}>{index+1}</td>
          <td><img src={employee.picture.medium}></img></td>
